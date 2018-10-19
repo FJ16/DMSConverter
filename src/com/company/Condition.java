@@ -7,8 +7,8 @@ import static com.company.Type.COND;
 
 public class Condition extends DMSNode {
     private String condSign;
+    private DMSNode expression;
     private DMSNode trueSide;
-    private DMSNode resultIfTrue;
     private DMSNode falseSide;
 
     Condition() {
@@ -27,8 +27,8 @@ public class Condition extends DMSNode {
         return falseSide;
     }
 
-    public DMSNode getResultIfTrue() {
-        return resultIfTrue;
+    public DMSNode getExpression() {
+        return expression;
     }
 
     public void setCondSign(String condSign) {
@@ -43,7 +43,7 @@ public class Condition extends DMSNode {
         this.falseSide = falseSide;
     }
 
-    public void setResultIfTrue(DMSNode reTrueSide) {
-        this.resultIfTrue = reTrueSide;
+    public void setExpression(DMSNode expression) {
+        this.expression = expression;
     }
 }

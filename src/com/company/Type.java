@@ -1,5 +1,5 @@
 package com.company;
 
 public enum Type {
-    FUNC, VAR, VALUE, COND, MAP;
+    FUNC, VAR, VALUE, COND, MAP, NUM;
 }
