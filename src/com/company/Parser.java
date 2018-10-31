@@ -205,7 +205,7 @@ public class Parser {
                 return expNode;
             } else {
                 // includes both calculation and comparision, calculation only appears in left part of comparision
-                expNode.setRightNode(parseExpression(sectionStart, sectionEnd));
+                expNode.setLeftNode(parseExpression(sectionStart, sectionEnd));
 
                 if (helper.isComparison(Calculation.charAt(sectionEnd + 1))) sectionEnd++;
                 // match <=, >= and <>

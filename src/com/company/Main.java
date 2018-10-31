@@ -12,10 +12,12 @@ public class Main {
         String testInput6 = "map([col1],\"Y\",1,7)";
         String testInput7 = "if([col1]=\"Fixed\",\"F\",\"A\")";
         String testInput8 = "if([col1]=\"Fixed\",addyear([col2],10),[col3])";
+        String testInput9 = "if([Lifetime Floor]-[Lifetime Ceiling]>0,[Lifetime Ceiling],[Lifetime Floor])";
+        String testInput10 = "if(inlist([Reprice Index],\"Cost of Funds\"),1,if(inlist([Reprice Index],\"Treasury\"),2,if(inlist([Reprice Index],\"na\"),0,\"REPRICE\")))";
 
         try {
-            Parser test = new Parser(testInput8);
-            DMSNode result = test.parse(0,testInput8.length());
+            Parser test = new Parser(testInput9);
+            DMSNode result = test.parse(0,testInput9.length());
             System.out.println(test.getCalculation());
         } catch (Exception e) {
             System.out.println("Error:" + e);
