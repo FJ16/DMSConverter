@@ -6,16 +6,33 @@ import static com.company.Type.FUNC;
 
 
 public class Function extends DMSNode {
-    private String funcBody;
+    private String funcAttribute;
+    private DMSNode variable;
     private List<DMSNode> subFuncs;
 
     Function(String name) {
         super(name, FUNC);
-        funcBody = "";
+        funcAttribute = "";
         subFuncs = new ArrayList<>();
     }
 
-    public String getFuncBody() {
-        return funcBody;
+    public String getFuncAttribute() {
+        return funcAttribute;
+    }
+
+    public DMSNode getVariable() {
+        return variable;
+    }
+
+    public List<DMSNode> getSubFunc() {
+        return subFuncs;
+    }
+
+    public void setFuncAttribute(String str) {
+        funcAttribute = str;
+    }
+
+    public void setVariable(DMSNode var) {
+        variable = var;
     }
 }

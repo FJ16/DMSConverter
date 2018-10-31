@@ -7,7 +7,8 @@ import static com.company.Type.MAP;
 
 public class Map extends DMSNode {
     private DMSNode variable;
-    private List<DMSNode> conditions;
+    private List<DMSNode[]> conditions;
+    private DMSNode endCondition;
 
     Map() {
         super("map", MAP);
@@ -19,7 +20,19 @@ public class Map extends DMSNode {
         return variable;
     }
 
-    public List<DMSNode> getConditions() {
+    public DMSNode getEndCondition() {
+        return endCondition;
+    }
+
+    public List<DMSNode[]> getConditions() {
         return conditions;
+    }
+
+    public void setVariable(Variable var) {
+        variable = var;
+    }
+
+    public void setEndCondition(DMSNode endVar) {
+        endCondition = endVar;
     }
 }

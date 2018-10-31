@@ -7,6 +7,7 @@ public class Variable extends DMSNode {
 
     Variable(String name) {
         super(name, VAR);
+        var = null;
     }
 
     public DMSNode getVar() {
